@@ -44,7 +44,7 @@ int main()
     root->right = new TreeNode(5);
     root->left->left = new TreeNode(3);
     root->left->right = new TreeNode(4);
-    preorder2Stack(root);
+    preorderRec(root);
     preorder2Stack(root); 
     return 0;
 }
