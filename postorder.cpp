@@ -10,11 +10,11 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 };
 
-void postOrderRec(TreeNode *root) {
+void postorderRec(TreeNode *root) {
     if (!root)
         return ;
-    postOrderRec(root->left);
-    postOrderRec(root->right);
+    postorderRec(root->left);
+    postorderRec(root->right);
     cout << root->val << endl;
 }
 
@@ -23,7 +23,7 @@ void postOrderRec(TreeNode *root) {
  * this solution is intuitive, the space is O(2n) -> O(n)
  * 
 **/
-void postOrder2Stack(TreeNode *root) {
+void postorder2Stack(TreeNode *root) {
     if (!root)
         return ;
     stack<TreeNode *>   s;
@@ -53,7 +53,7 @@ int main()
     root->right = new TreeNode(4);
     root->left->left = new TreeNode(1);
     root->left->right = new TreeNode(2);
-    postOrderRec(root);
-    postOrder2Stack(root); 
+    postorderRec(root);
+    postorder2Stack(root); 
     return 0;
 }
