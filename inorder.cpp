@@ -18,7 +18,7 @@ void inorderRec(TreeNode *root) {
     inorderRec(root->right);
 }
 
-void inorder2Stack(TreeNode *root) {
+void inorderIter(TreeNode *root) {
     if (!root)
         return ;
     stack<TreeNode *>   s;
@@ -43,6 +43,6 @@ int main()
     root->left->left = new TreeNode(1);
     root->left->right = new TreeNode(3);
     inorderRec(root);
-    inorder2Stack(root); 
+    inorderIter(root); 
     return 0;
 }
